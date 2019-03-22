@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Alles schuift</title>
+	<meta name="author" content="Regilio Spee | MD1B">
+	<meta name="viewport" content="width=device-width, initial">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+
+		#toggleMenu:checked ~ nav {
+			margin-left: 0.1px;
+        }
+
+
+        #toggleMenu:checked ~ main {
+			margin-left: 10em;
+		}
+        
+        main #toggleLabel::before {
+            margin-left: 0px;
+            transition: margin-left .6s ease-out;
+ 
+
+        }
+
+		#toggleLabel::before{
+			content: "\2630";
+            cursor: pointer;
+            position: static;
+		}
+
+		#toggleMenu:checked ~ main #toggleLabel::before{
+            content: "\2715";
+            margin-left: 0px;
+            height: 100%;
+		}
+
+		nav{
+            position: fixed;
+            height: 100vh;
+            margin-left: -10em;
+            background-color: #333;
+            transition: margin-left .6s ease-out;
+		}
+
+		main{
+			position: absolute;
+		margin-left: 0;
+        transition: margin-left .6s ease-out;
+        
+		}
+	</style>
+</head>
+<body lang="nl">
+	<input type="checkbox" id="toggleMenu">
+	<nav>
+		<h4>Menu</h4>
+		<ul>
+			<li>
+				<a href="index.html">Inhoud schuift</a>
+			</li>
+			<li>
+				<a href="menuSchuift.html" >Menu schuift</a>
+			</li>
+			<li>
+				<a href="allesSchuift.html" class="actief">Alles schuift</a>
+			</li>
+		</ul>
+	</nav>
+
+	<main>
+		<label for="toggleMenu" id="toggleLabel"></label>
+		<h1>Haai</h1>
+		<p><img src="haai.jpg" alt="haai"></p>
+		<p>De haaien (Selachimorpha, ook wel Euselachii) behoren tot de kraakbeenvissen. De oudste bekende fossielen van haaien dateren van meer dan 425 tot 455 miljoen jaar geleden.[1] Er zijn meer dan 1000 soorten beschreven kraakbeenvissen, waaronder ongeveer 400 soorten haaien en 600 soorten roggen en pijlstaartroggen en ongeveer 30 soorten holocephali (draakvissen en chimeren, meestal diepzeevissen waarover vaak nog weinig bekend is).[2][3]
+                Haaien zijn bij het grote publiek vooral bekend door de (voor de mens) gevaarlijke soorten, maar van de ongeveer 400 soorten zijn slechts vier of vijf soorten als gevaarlijk aan te merken. De meeste haaien zijn slanke, gespierde en snelle dieren die een lengte bereiken van rond de 1 à 2 meter. Het zijn bijna allemaal predatoren (roofvissen) die leven van gewervelde dieren (meestal vissen maar ook zeezoogdieren en vogels), grote kreeftachtigen en weekdieren (macrofauna).
+                De kop van een haai is groot en kegelvormig, de kop bevat kleine ogen aan de zijkant en neusgaten vooraan boven op de snuit. Langs de kaakrand bevinden zich een of meer rijen sterke zaagtanden met aan de binnenzijde van de kaak nog vele rijen reservetanden. Omdat de tanden regelmatig worden verloren en vervangen door de reservetanden zijn deze altijd vlijmscherp. Aan weerszijden van de kop bevinden zich meestal 5 kieuwspleten, zelden 6 of 7. Hiermee filtert de haai zuurstof uit het water. Het is waar dat veel haaien moeten blijven zwemmen om zich continu van genoeg zuurstof te voorzien, maar er zijn ook soorten die de bek regelmatig open en dicht doen waardoor er ook water langs de kieuwen wordt gevoerd. Hierdoor kunnen ze toch zuurstof opnemen terwijl ze niet bewegen.</p>
+		<p>Bron: <a target="_blank" href="https://nl.wikipedia.org/wiki/Haaien">Wikipedia</a></p>
+		
+
+
+
+
+
+
+
+
+		<div id="validatie">
+                <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+                  <img src="http://blog.boyet.com/blog/files/media/image/valid-html5-blue.png" alt="Valide HTML5"></a>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                  <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+                </a>
+              </div>
+	</main>
+
+</body>
+</html>

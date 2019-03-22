@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Schuivend menu</title>
+	<meta name="author" content="Regilio Spee | MD1B">
+	<meta name="viewport" content="width=device-width, initial">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+
+		#toggleMenu:checked ~ nav {
+			margin-left: 0.1px;
+        }
+        
+        main #toggleLabel::before {
+            margin-left: 0px;
+            transition: margin-left .6s;
+
+        }
+
+		#toggleLabel::before{
+			content: "\2630";
+            cursor: pointer;
+            position: static;
+		}
+
+		#toggleMenu:checked ~ main #toggleLabel::before{
+            content: "\2715";
+            margin-left: 140px;
+            height: 100%;
+		}
+
+		nav{
+            position: fixed;
+            height: 100vh;
+            margin-left: -10em;
+            background-color: #333;
+            transition: margin-left .6s;
+		}
+
+		main{
+			position: static;
+		margin-left: 0;
+		}
+	</style>
+</head>
+<body lang="nl">
+	<input type="checkbox" id="toggleMenu">
+	<nav>
+		<h4>Menu</h4>
+		<ul>
+			<li>
+				<a href="index.html">Inhoud schuift</a>
+			</li>
+			<li>
+				<a href="menuSchuift.html" class="actief">Menu schuift</a>
+			</li>
+			<li>
+				<a href="allesSchuift.html">Alles schuift</a>
+			</li>
+		</ul>
+	</nav>
+
+	<main>
+		<label for="toggleMenu" id="toggleLabel"></label>
+		<h1>Panter</h1>
+		<p><img src="panther.jpg" alt="panter"></p>
+		<p>Een panter is een katachtige met een afwijkende, volledig zwarte tekening, meestal een luipaard of een jaguar .
+
+                Meerdere katachtige dieren vertonen overvloedige lokale variaties in tekening en pels, resultaten van mutaties in lokale populaties, waarbij koninklijke luipaard vergeleken wordt (zie luipaard ), maar de volledige zwarte vormen van luipaard en jaguar zijn stabiele elementen van de populaties en worden gevonden in het hele bereik van deze soorten. De belangrijkste zijn de zwarte vormen van luipaard ( Panthera pardus ) en jaguar ( Panthera onca ).
+                
+                Een melanistische vorm van puma ( Puma concolor ) wordt genoemd maar nooit gecoat, terwijl verschillende andere kleinere katten goed gecoat zijn in zwarte vormen, waaronder ozelot ( Leopardus pardalis ) en margay ( Leopardus wiedii ).</p>
+                <p>Aanvankelijk heeft het woord "panter" een variatie van het luipaard betekend die een langere staart heeft gehad en dus geen kleurafwijkingen heeft gehad. In verschillende delen van de wereld heeft het woord panter verschillende betekenissen - het opnemen van jaguars is voornamelijk een Zuid-Amerikaanse traditie, terwijl het woord soms poema bevat in Noord-Amerika en dan niets te maken heeft met het tekenen van kleuren. In Zweeds gebruik heeft de betekenis "zwarte panter" de afzonderlijke betekenis van "panter" eerder volledig overschaduwd.</p>
+		<p>Bron: <a target="_blank" href="https://sv.wikipedia.org/wiki/Panter">Wikipedia</a></p>
+		
+		<div id="validatie">
+                <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+                  <img src="http://blog.boyet.com/blog/files/media/image/valid-html5-blue.png" alt="Valide HTML5"></a>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                  <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+                </a>
+              </div>
+	</main>
+
+</body>
+</html>
